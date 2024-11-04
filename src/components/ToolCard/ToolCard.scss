@@ -1,0 +1,89 @@
+.tool-card {
+  background-color: global.$midnightBlue;
+  border-radius: 10px;
+  padding: 8px;
+  border: 2px solid #1b1f21;
+
+  &:hover {
+    .actions {
+      opacity: 1;
+    }
+  }
+
+  .tool-card__cover {
+    height: 200px;
+    background-color: global.$lightGray;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    transition: opacity 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    &__image {
+      display: block;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  .tool-card__data {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      color: global.$softWhite;
+      font-size: 1.1rem;
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+      }
+    }
+
+    &__categories {
+      color: global.$lightGray;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+
+    &__description {
+      color: global.$lightGray;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      overflow: hidden;
+    }
+  }
+}
+
+.actions {
+  transition: opacity 0.5s ease;
+  opacity: 0;
+  display: flex;
+  align-items: stretch;
+
+  &__item {
+    width: calc(1.1rem + 0.4rem);
+    height: calc(1.1rem + 0.4rem);
+    fill: global.$lightGray;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--active {
+      fill: #941f29;
+    }
+  }
+}

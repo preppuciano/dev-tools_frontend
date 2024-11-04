@@ -1,0 +1,40 @@
+@use 'sass:color';
+
+@mixin mixin-button-style($color, $backgroundColor) {
+  color: $color;
+  background-color: $backgroundColor;
+
+  &:hover {
+    cursor: pointer;
+    background-color: color.adjust($backgroundColor, $lightness: 5%);
+  }
+}
+
+.button {
+  all: unset;
+  user-select: none;
+  border-radius: 5px;
+  padding: 2px 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+
+  &--white {
+    @include mixin-button-style(global.$midnightBlue, global.$softWhite);
+  }
+
+  &--success {
+    @include mixin-button-style(global.$onSuccess, global.$success);
+  }
+
+  &--danger {
+    @include mixin-button-style(global.$onDanger, global.$danger);
+  }
+
+  &__icon {
+    &--white {
+      fill: global.$midnightBlue;
+    }
+  }
+}

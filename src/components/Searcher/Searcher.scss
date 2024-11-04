@@ -1,0 +1,36 @@
+@use 'sass:color';
+
+.searcher {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: global.$midnightBlue;
+  border-radius: 5px;
+  border: 2px solid color.adjust(global.$lightGray, $alpha: -0.9);
+  padding: 10px 10px;
+  transition: border-color 0.5s, border-width 0.5s;
+
+  &:focus-within {
+    border-color: global.$lightGray;
+    border-width: 2px;
+  }
+
+  input[type="search"] {
+    width: 100%;
+  }
+
+  input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    color: white;
+    background-color: red;
+    height: 1rem;
+    width: 1rem;
+    background: url('../../assets/icons/close.svg') no-repeat 50% 50%;
+    border-radius: 1rem;
+  }
+}
+
+.searcher-input {
+  all: unset;
+}

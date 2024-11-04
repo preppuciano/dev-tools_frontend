@@ -1,0 +1,28 @@
+.sidebar {
+  grid-area: sidebar;
+  padding: 10px;
+  height: calc(100vh - 70px);
+  position: sticky;
+  top: 70px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  z-index: 1;
+
+  // Small devices (landscape phones, less than 768px)
+  @media (max-width: 991.98px) {
+    display: none;
+  }
+}
+
+.total-resources {
+  &__name {
+    letter-spacing: 1px;
+    color: global.$lightGray;
+  }
+
+  &__value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: global.$softWhite;
+  }
+}

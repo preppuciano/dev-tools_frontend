@@ -1,0 +1,20 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+
+.menu-head {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.menu-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}

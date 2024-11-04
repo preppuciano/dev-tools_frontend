@@ -1,0 +1,101 @@
+@use 'sass:color';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &--block{
+      flex-direction: column;
+      justify-content: start;
+      align-items: stretch;
+    }
+  }
+}
+
+.input-container {
+  width: 100%;
+  background-color: global.$midnightBlue;
+  border-radius: 5px;
+  border: 2px solid color.adjust(global.$lightGray, $alpha: -0.9);
+  padding: 8px 10px;
+  transition: border-color 0.5s, border-width 0.5s;
+
+  &:focus-within {
+    border-color: global.$lightGray;
+    border-width: 2px;
+  }
+
+  input {
+    all: unset;
+    width: 100%;
+  }
+}
+
+.label-container {
+  font-size: 1rem;
+  color: global.$softWhite;
+}
+
+.text-area-container {
+  width: 100%;
+  background-color: global.$midnightBlue;
+  border-radius: 5px;
+  border: 2px solid color.adjust(global.$lightGray, $alpha: -0.9);
+  padding: 8px 10px;
+  transition: border-color 0.5s, border-width 0.5s;
+  resize: vertical;
+  overflow: auto;
+
+  &:focus-within {
+    border-color: global.$lightGray;
+    border-width: 2px;
+  }
+
+  textarea {
+    all: unset;
+    width: 100%;
+  }
+}
+
+.multi-select-container {
+  border: 1px dashed global.$lightGray;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+
+    .select {
+      all: unset;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+
+    .option {
+      all: unset;
+      border: 1px solid global.$softWhite;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      color: global.$lightGray;
+
+      &:hover{
+        color: global.$softWhite;
+      }
+
+      &--active{
+        background-color: global.$softWhite;
+        color: global.$midnightBlue;
+
+        &:hover{
+          color: global.$midnightBlue;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.input-tags {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  &__list {
+    border: 1px dashed global.$lightGray;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__item {
+    all: unset;
+    border: 1px solid global.$softWhite;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: global.$lightGray;
+    user-select: none;
+  }
+}

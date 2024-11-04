@@ -1,0 +1,27 @@
+.main-content {
+  grid-area: main-content;
+  padding: 10px;
+
+  &__title {
+    text-transform: uppercase;
+    color: global.$softWhite;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+  }
+
+  &__container {
+    &--background {
+      padding: 10px;
+      border-radius: 10px;
+      /* START - Glassmorphism From https://css.glass */
+      background: rgba(0, 0, 0, 0.48);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(8.3px);
+      -webkit-backdrop-filter: blur(8.3px);
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      /* END - Glassmorphism From https://css.glass */
+    }
+  }
+}

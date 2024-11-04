@@ -1,0 +1,28 @@
+.menu-button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+
+  .menu-button__icon {
+    width: 1rem;
+    height: 1rem;
+    fill: global.$lightGray;
+    transition: fill 0.3s ease;
+  }
+
+  .menu-button__text {
+    color: global.$lightGray;
+    transition: color 0.3s ease;
+  }
+
+  &:hover {
+    .menu-button__icon {
+      fill: global.$softWhite;
+    }
+
+    .menu-button__text {
+      color: global.$softWhite;
+    }
+  }
+}
